@@ -1,0 +1,129 @@
+<% include ../partials/header %>
+
+<div class="navDiv"> 
+        <div class="buttonP">
+            <button class="navDivButton buttonBorderColor">Slide Up</button>
+       </div>
+</div>
+
+
+<%include ../partials/body%>
+
+<h1 class="indexh1">Welcome to Food site</h1>
+
+<hr>
+
+<% if(currentUser && currentUser.isAdmin) { %>
+<h1 class="adminH1">You are admin</h1>
+<% } %>
+<% newFood.forEach(function(food) { %>
+    <li class="rowcolor" > 
+      <div class="container">
+            <div class="row">
+                 <div class="col-md-6 col-md-offset-3">
+                       <h3 class="indexh2"><%= food.title %></h3>
+                       <p class="indexP">DATE  <%=food.created.toDateString().toUpperCase()%></p>
+                       <div class="divContent">
+                           <div>
+                           <img class="indexImg"src=" <%=food.image%>">
+                           <!--<iframe width="400" height="300" src="<%=food.video%>"></iframe> -->
+                           </div>
+                           <%= food.text.substring(0,350) %>...
+                           
+                         
+                       </div>
+                       <div class="socialMedia">
+                           <p class="ip2"> share this:
+                              <span class="wordSpacing">
+                                   <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i> facebook</a> 
+                                   <a href="https://www.facebook.com/"><i class="fab fa-twitter-square"></i> twitter</a> 
+                                   <a href="https://www.facebook.com/"><i class="fab fa-instagram"></i> instagram</a>
+                                   <a href="https://www.facebook.com/"><i class="fab fa-google-plus-square"></i></i> google</a>
+                                   <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i></i></i> youtubee</a>
+                              </span>
+                           </p>
+                       </div>
+                           <div class="readButton">
+                            
+                                   
+                                   <a href="/food/<%= food._id%> " class="buttonReadMore ">Read More</a>
+                                
+                           </div>
+                           
+                        
+                
+           </div>
+      </div>
+  </li>
+  
+<% }) ;%>
+
+ <div class="indexBox">
+      <div class="container ">
+          <div class="row">
+
+              <div class="col-md-6">
+                  <h5 class="IndexH4">Text Widget</h5>
+                  <div class="textBottom">
+                      Serious Eats routinely contain links to external, third party websites. 
+                      By providing links to other sites, Serious Eats does not guarantee, 
+                      approve or endorse the information or products available at these sites, nor does a link indicate any association with or endorsement by the linked site to Serious 
+                      Eats.Serious Eats does not operate or control and has no responsibility for the information, products and/or services found on any external sites. 
+                      Nor do such links represent or endorse the accuracy or reliability of any information, 
+                      products and/or services provided on or through any external sites, including, without limitation, warranties of any kind, either express or implied, 
+                      warranties of title or non-infringement or implied warranties of merchantability or fitness for a particular purpose.
+                      The Serious Eats RSS feed may be found here. Serious Eats provides a general license to use this feed, provided it is not modified in any way (including the stripping of ads) with the exception of image stripping when the feed is incorporated into a commercial use. All commercial uses of Serious Eats feeds (including but not limited to websites generating revenue through advertisements) 
+                      must strip all images from the feed to ensure copyright compliance with any third-party photographic agency licenses.
+                                            Serious Eats routinely contain links to external, third party websites. 
+                      By providing links to other sites, Serious Eats does not guarantee, 
+                      approve or endorse the information or products available at these sites, nor does a link indicate any association with or endorsement by the linked site to Serious 
+                      Eats.Serious Eats does not operate or control and has no responsibility for the information, products and/or services found on any external sites. 
+                      Nor do such links represent or endorse the accuracy or reliability of any information, 
+                      products and/or services provided on or through any external sites, including, without limitation, warranties of any kind, either express or implied, 
+                      warranties of title or non-infringement or implied warranties of merchantability or fitness for a particular purpose.
+                      The Serious Eats RSS feed may be found here. Serious Eats provides a general license to use this feed, provided it is not modified in any way (including the stripping of ads) with the exception of image stripping when the feed is incorporated into a commercial use. All commercial uses of Serious Eats feeds (including but not limited to websites generating revenue through advertisements) 
+                      must strip all images from the feed to ensure copyright compliance with any third-party photographic agency licenses.
+                  </div>
+              </div>
+              <h5 class="IndexH4">Last Posts</h5>
+                   <%if(newFood.length<3){%>
+                     <% for(var i=0; i<0;i++) {%>
+                     
+                    
+                        <a class="newFoodLast3" href="food/<%=newFood[i]._id%>"> 
+                           <div class="col-md-6">
+                                <!--<div>-->
+                                <div class="imgnews">
+                                  <img class="countImg" src="<%=newFood[i].image%>" > 
+                                </div>
+                                <div class="titlenews">
+                                    <h5 class="countTitle"><%= newFood[i].title%></h5>
+                               </div>            
+                                <!--</div>-->
+                            </div>
+                        </a>
+                          <% } %>
+                        <% }else{%>
+                                        <% for(var i=0; i<3;i++) {%>
+                     
+                    
+                        <a class="newFoodLast3" href="food/<%=newFood[i]._id%>"> 
+                           <div class="col-md-6">
+                                <!--<div>-->
+                                <div class="imgnews">
+                                  <img class="countImg" src="<%=newFood[i].image%>" > 
+                                </div>
+                                <div class="titlenews">
+                                    <h5 class="countTitle"><%= newFood[i].title%></h5>
+                               </div>            
+                                <!--</div>-->
+                            </div>
+                              <% } %>
+                      <% } %>
+                  <!--</div>-->
+              
+          </div>
+      </div>
+  </div>
+<% include ../partials/footer %>
+                

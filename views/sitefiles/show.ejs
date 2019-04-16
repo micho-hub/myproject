@@ -1,0 +1,114 @@
+<%include ../partials/header%>
+<div class="navDivShow">
+    
+    <div class="buttonP">
+      <button class="navDivButton buttonBorderColor">Slide Up</button>
+   </div>
+</div>
+
+<%include ../partials/body%>
+<h1 class="showH1">Thank you for visiting</h1>
+<hr>
+<div class="container">
+    <div class="row">
+           <div class="col-md-8 col-md-offset-2">
+                <h3 class="showTitle"><%=newId.title%></h3>  
+                <p class="showP">DATE  <%=newId.created.toDateString().toUpperCase()%></p>
+                <img class="showImg" src="<%= newId.image%>">
+                <%= newId.video%>
+                <div class="showText"><%= newId.text%></div>
+                
+                <div class="socialMedia">
+                  <p class="ip2"> share this:
+                     <span class="wordSpacing">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i> facebook</a> 
+                        <a href="https://www.facebook.com/"><i class="fab fa-twitter-square"></i> twitter</a> 
+                        <a href="https://www.facebook.com/"><i class="fab fa-instagram"></i> instagram</a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-google-plus-square"></i> google</a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i> youtubee</a>
+                     </span>
+                   </p>
+                 </div>
+                 <%if(currentUser&& currentUser.isAdmin) {%>
+                 <a class="acolor"href="/food/<%=newId._id %>/edit">
+                     <div class="showEditButton">
+                         Edit
+                     </div>
+                 </a>
+                 <% } %>
+                
+          </div>
+    </div>
+</div>       
+<div class="showDivComments">
+        <div class="container">
+              <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                          
+                                  <form class="form-group"action="/food/<%=newId._id%>/" method="POST">
+                                       <% if(!currentUser){ %>
+                                     <div class="form-group">
+                                         <input class="form-control" type="text" name="comm[userName]" placeholder="name">
+                                     </div>
+                                     <% } else { %>
+                                        <li class="laste"><strong>User: </strong> <%= currentUser.username%></li>
+                                     <% } %>
+                                    <div class="form-group">
+                                          <input class="form-control" type="text" name="comm[content]" placeholder="text">
+                                    </div>
+                                    
+                                    <button class="form-control commentButton btn btn-success">OK</button>
+                                </form>
+                               
+                      <div class="well">
+                          <p class="pComment">Comments:</p>
+                          <% newId.comments.forEach(function(com){%>
+                              <div class="row">
+                                  <div class="col-xs-10  ">
+                                     <strong><%= com.userName.userx%>: </strong>
+                                     <%= com.content%>
+                                 </div>
+                                 <div class="col-xs-2">
+                                            <%if (currentUser && com.userName.id.equals(currentUser._id)) { %>
+                                                <a class="btn btn-xs btn-warning btnxs"
+                                                    href="/food/<%=newId._id%>/<%=com._id%>/edit">Edit
+                                                </a>
+                                                <form id="delete-form" action="/food/<%=newId._id%>/<%=com._id%>?_method=DELETE" method="POST">
+                                                    <button class="btn btn-xs btn-danger btnxs " >Remove</button>
+                                                </form>
+                                            <% } %>
+                                  </div>
+                              </div>
+ 
+                         <% }) %>
+                            
+                      </div> 
+                      <%if(currentUser) {%>
+                          <a href="/logout">logout</a>
+                          <% } %>
+                      </div>
+ 
+                      </div>
+                       
+
+                    <div class="showCommentsShare">
+                          <a href="#" ><i class="ic fab fa-twitter-square"></i></a>
+                          <a href="#"><i class="ic fab fa-steam-square"></i></a>
+                          <a href="#"><i class="ic fab fa-snapchat-square"></i></a>
+                          <a href="#"><i class="ic fab fa-reddit-square"></i></a>
+                          <a href="#"><i class="ic fab fa-pinterest-square"></i></a>
+                          <a href="#"><i class="ic fab fa-facebook-square"></i></a>
+                          <a href="#"><i class="ic fab fa-google-plus-square"></i></a>
+                          <a href="#"><i class="ic fab fa-linkedin"></i></a>
+                          <a href="#"><i class="ic fas fa-rss-square"></i></a>
+                          <a href="#"><i class=" ic fab fa-viadeo-square"></i></a>
+                          
+                    </div>
+        </div>
+</div>
+
+
+
+
+
+<%include ../partials/footer%>

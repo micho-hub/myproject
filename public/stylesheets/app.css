@@ -1,0 +1,473 @@
+
+body{
+    font-family: 'Encode Sans Condensed', sans-serif;
+    
+}
+
+
+.navDivOver:hover{
+    
+    height:350px;
+    background:rgba(255, 255, 255, 0.34);
+    
+}
+
+.rowcolor:nth-child(2n){
+    
+    background:rgb(245, 245, 245);
+}
+.well{
+    padding:0;
+
+}
+.commentButton{
+    margin-bottom:40px;
+}
+.well1{
+    padding:9px;
+    background:rgb(244, 244, 244);
+}
+.well1:nth-child(2n){
+     background:rgb(227, 222, 229);
+
+}
+li{
+    list-style:none;
+}
+.divContent{
+   padding-bottom:25px;
+   text-align: justify;
+    
+}
+.indexImg{
+    height:120px;
+    width:190px;
+    float:left;
+    padding:7px;
+}
+.indexh2{
+    text-align:center;
+    
+}
+.indexh1
+{
+    padding-top:25px;
+    padding-bottom:25px;
+    text-align:center;
+    
+    background: white;
+}
+
+.indexP{
+    letter-spacing:0.1em;
+    text-align:center;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+
+.wordSpacing{
+        word-spacing:1px;
+       
+    
+}
+i{
+     color:rgb(52, 58, 64);
+}
+.ip2{
+    text-transform:uppercase;
+    text-align:center;
+     color:rgb(52, 58, 64);
+    margin-bottom:30px;
+
+}
+
+.readButton{
+    text-align:center;
+}
+.buttonReadMore {
+  background-color: transparent;
+  border: none;
+  color: rgb(97, 97, 97);
+  padding: 15px 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border:1px solid rgb(97, 97, 97);
+}
+.buttonReadMore:hover{
+    background-color:rgb(205, 205, 205);
+    color:white;
+    
+}
+.navDivButton{
+  background-color: transparent;
+  border: 1px solid rgb(85, 86, 86);
+  color:rgb(85, 86, 86);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top:270px;
+  width:270px;
+}
+.navDivButton:hover{
+    background-color:rgba(20, 0, 0, 0.26);
+}
+.buttonP{
+    
+    text-align:center;
+    
+
+}
+
+
+a{
+     color:rgb(52, 58, 64);
+}
+
+.food{
+    font-size:1.2em;
+}
+.navbar-default{
+    margin-bottom:auto;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom:0;
+    margin-top:0;
+    
+}
+
+
+
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position :fixed;
+ top:0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top:0;
+}
+
+.size{
+    width:100%;
+}
+
+.navbar{
+  background:rgb(255, 255, 255);
+   
+    z-index:1;
+}
+.showImg{
+    height:220px;
+    width:350px;
+    float:left;
+    padding:7px;
+    
+}
+.showTitle{
+    padding-bottom:5px;
+    text-align:center;
+    padding-top:25px;
+}
+.showText{
+    padding-bottom:35px;
+    text-align: justify;
+}
+.showH1{
+    padding-top:25px;
+    text-align:center;
+    padding-bottom:25px;
+   
+}
+.showP{
+    padding-bottom:45px;
+    text-align:center;
+    letter-spacing:0.1em;
+}
+ a {
+     text-decoration: none ;
+  }
+a:hover
+  {
+    color:skyblue;
+    text-decoration:none;
+    cursor:pointer;
+   }
+.showEditButton{
+    background-color: white;
+  border: 1px solid rgb(97, 97, 97);
+  color: rgb(97, 97, 97);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin:0 auto;
+  font-size: 16px;
+  cursor: pointer;
+  width:270px;
+}
+.showEditButton:hover{
+    background-color:rgb(205, 205, 205);
+    color:white;
+    
+}
+.showCommentForm{
+    width:100%;
+}
+
+.showDivComments{
+    padding-top:55px;
+    padding-bottom:155px;
+    background:rgb(140, 135, 142);
+    margin-top:90px;
+}
+.respon{
+    text-align:center;
+}
+.showCommentsShare{
+    font-size:45px;
+    text-align:center;
+    padding-top:55px;
+}
+.ic{
+    color:white;
+}
+
+.newH1{
+    padding-top:25px;
+    padding-bottom:25px;
+    text-align:center;
+}
+.newButton{
+      background-color: #4CAF50; 
+  border: 1px solid rgb(97, 97, 97);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-bottom:190px;
+  
+}
+.newButton:hover{
+    background-color:white;
+    color:rgb(97, 97, 97);
+}
+
+.buttonDelete{
+     background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonUpdate{
+        background-color:#008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 16px;
+  margin-bottom:240px;
+  float:left;
+}
+.navDivEdit{
+       background:url("https://mdec.my/assets/migrated/images/header-iot.jpg");
+  height:340px;
+  text-align: center;
+     /*padding: 50px;*/
+
+       
+}
+.slide-up
+{
+    bottom: 0px !important;
+}
+
+.navDivShow{
+        background:url("http://www.ozblu.com/wp-content/uploads/2017/10/OzBlu-Blueberry-Innovation-Header.jpg");
+ 
+  text-align: center;
+  height:340px;
+
+}
+.newHeadDiv{
+      background:url("https://sterlingagency.com/wp-content/uploads/2018/04/Header-Phones-and-Papers-on-Desk.jpg");
+  
+  text-align: center;
+   height:340px;
+
+}
+.navDiv{
+    background:url("https://ardo.com/files/attachments/.10903/w1800h544zccq85_header_producten.jpg");
+ 
+  text-align: center;
+    height:340px;
+
+}
+.newDivPosition{
+    padding-top:55px;
+}
+.IndexH4{
+    text-align:center;
+    padding-bottom:25px;
+    padding-top:25px;
+  
+}
+.textBottom{
+      margin-bottom:70px;
+}
+.indexBox{
+    background:rgb(61, 65, 74);
+    color:white;
+    font-size:10px;
+   padding-bottom:90px;
+
+    text-align:justify;
+    
+}
+.newFoodLast3{
+    color:white;
+    margin:0;
+}
+.editDiv{
+    margin-bottom:90px;
+}
+.imgnews .countImg{
+    height:90px;
+    width:30%;
+   padding-bottom:7px;
+    float:left;
+}
+.editH1{
+    text-align:center;
+     padding-top:25px;
+    padding-bottom:25px;
+}
+.titlenews{
+    height:90px;
+    width:70%;
+
+     float:right
+}
+.pComment{
+    text-align:center;
+}
+.laste{
+   color:white;
+}
+.loginH1 {
+    text-align:center;
+}
+.formTop{
+    margin-top:150px;
+}
+.btnlog{
+    width:100%;
+}
+.btnMargin{
+    margin-bottom:50px;
+}
+
+.flash{
+    margin-top:9px;
+}
+.noadmin{
+    text-align:center;
+    color:darkred;
+}
+
+
+.btnxs{
+    float:right;
+    padding-bottom:3px;
+     margin-right:0;
+     width:40px;
+     font-size:9px;
+}
+.butonxs{
+    width:10%;
+    margin-bottom:4px;
+   
+}
+.iconcolor{
+    color:#6ef442;
+}
+.btv{
+    width:90%;
+}
+#check{
+    font-size:50px;
+    color:rgb(68, 157, 68);
+}
+#brake{
+       font-size:50px;
+    color:rgb(255, 0, 0);
+}
+
+.iconMess, .successMessage {
+    text-align:center;
+}
+.colorText{
+   color:rgb(68, 157, 68);
+}
+.colorText1{
+     color:rgb(255, 0, 0);
+}
+
+.iconMess .iconMess1{
+    margin-top:30px;
+}
+.adminH1{
+   text-align:center;
+   color:red;
+}
+.row-demo {
+  margin-top: 32px;
+}
+.row-demo > div {
+  background: #69c;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+}
+.row-demo > div:nth-child(3n+2) { background: #c69; }
+.row-demo > div:nth-child(3n+3) { background: #9c6; }
+
+.buttonBorderColor{
+    border:1px solid white;
+    color:white;
+}
+.star{
+    text-align:center;
+    color:skyblue;
+}
+.star1{
+    margin-left:47%;
+    color:green;
+    margin-top:320px;
+    
+}

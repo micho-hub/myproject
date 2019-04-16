@@ -1,0 +1,44 @@
+<%include ../partials/header%>
+<div class="navDivEdit">
+    
+    <div class="buttonP">
+      <button class="navDivButton">Slide Up</button>
+   </div>
+</div>
+<%include ../partials/body%>
+<h1 class="editH1">Edit your post</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div>
+                <form action="/food/<%=newEdit._id%>?_method=PUT" method="POST">
+                    <div>Title
+                         <input class="form-control" type="text" name="foodForm[title]" value="<%=newEdit.title%>">
+                    </div>
+                    <div>Image
+                        <input class="form-control"type="text" name="foodForm[image]" value="<%= newEdit.image%>">
+                    </div>
+                    <div>Video
+                        <input class="form-control"type="text" name="foodForm[video]" value="<%= newEdit.video%>">
+                    </div>
+                    <div>Text
+                        <textarea rows="20" class="form-control editText" name="foodForm[text]"><%= newEdit.text%></textarea>
+                         <spam class="hederSpam">
+                             <input type="checkbox">
+                            : make asheader post
+                         </spam>
+                    </div>
+                    
+                    <button class="buttonUpdate">Update</button>
+                </form>
+         
+            </div class="editDiv">
+                   <form id="delete"action="/food/<%= newEdit._id %>?_method=DELETE" method="POST">
+                    <button class="buttonDelete">Delete</button>
+                    
+                </form>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer%>

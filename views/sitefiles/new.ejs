@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="newHeadDiv">
+    
+    <div class="buttonP">
+      <button class="navDivButton">Slide Up</button>
+   </div>
+</div>
+<% include ../partials/body%>
+<h1 class="newH1">Create your new post</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="newDivPosition">
+                <form action="/food" method="POST" onsubmit="var text = document.getElementById('minle').value; if(text.length < 250) { alert('You post mast have more then 250 caracters!'); return false; } return true;">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="foodForm[title]" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="foodForm[image]" placeholder="Image">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="foodForm[video]" placeholder="Video">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control"  type="text" name="foodForm[text]" placeholder="Text" rows="10" cols="250" maxlength="132000" required id="minle"></textarea>
+                    </div>
+                    <button class="newButton">Submitt</button>
+                </form>
+            </div>
+        </div>
+     </div>
+ </div>
+<%include ../partials/footer%>

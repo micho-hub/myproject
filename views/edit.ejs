@@ -1,0 +1,30 @@
+<%include ./partials/header%>
+<div class="showDivComments">
+        <div class="container">
+              <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                          
+                                <h1>Edit</h1>
+                                  <form class="form-group"action="/food/<%=newId_id%>/<%=comment._id%>?_method=PUT" method="POST" onsubmit="var text = document.getElementById('minle').value; if(text.length < 250) { alert('You post mast have more then 250 caracters!'); return false; } return true;">
+                                       <% if(!currentUser){ %>
+                                     <div class="form-group">
+                                         <input class="form-control" type="text" name="comm[userName]" placeholder="name">
+                                     </div>
+                                     <% } else { %>
+                                        <li class="laste"><strong>User: </strong> <%= currentUser.username%></li>
+                                     <% } %>
+                                    <div class="form-group">
+                                          <input class="form-control" type="text" name="comm[content]" value="<%=comment.content%>">
+                                    </div>
+                                    
+                                    <button class="form-control commentButton btn btn-success">OK</button>
+                                </form>
+ 
+                       <a href="/logout">logout</a>
+                      </div>
+ 
+                      </div>
+                       
+        </div>
+</div>
+<%include ./partials/footer%>
