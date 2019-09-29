@@ -25,7 +25,7 @@ var app = express();
 app.set("view engine", "ejs");
 
 app.use(require("express-session")({
-    secret:"ke vozam tocak i ke go digam na edno kur me boli ",
+    secret:"vozam velosiped ",
     resave:false,
     saveUninitialized:false
 }));
